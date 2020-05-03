@@ -10,7 +10,8 @@ public class main {
         Controller controller = new Controller() ;
         //Condition
         Scanner scanner = new Scanner(System.in) ;
-        while(true) {
+        boolean check = true ;
+        while(check) {
             System.out.println("Nhap lua chon cua ban :") ;
             int inputUser = scanner.nextInt() ;
             System.out.println("Ban da chon " + inputUser);
@@ -26,13 +27,16 @@ public class main {
                     break ;
                 case 4 :
                     controller.hienthi() ;
+                    break ;
                 case 5 :
                     controller.sapxep() ;
                     break ;
                 case 6 :
                     controller.timkiem();
+                    break ;
                 case 0 :
                     System.out.println("Ban da thoat khoi chuong trinh");
+                    check = false ;
                     break ;
                 default :
                     System.out.println("Khong hop le");
